@@ -1,161 +1,205 @@
-# 🖥️ Complete Guide to Setting Up Your Programming Environment
+# 🖥️ Complete VS Code & Python Installation Guide
 
-## 📌 What is This Guide?
-This guide covers the **complete setup process** for the **TCM Programming 100 course**. It walks through installing essential tools like **VS Code**, **Git**, **GitHub**, and **Python virtual environments**.
+## 📌 Overview
+This guide provides step-by-step instructions for installing **Visual Studio Code** and **Python** on the three major operating systems: **Windows**, **macOS**, and **Linux**. Both tools are essential for modern software development.
 
-✅ **Key Components:**
-- VS Code Installation & Configuration
-- Git Setup & GitHub Integration
-- Python Environment Management
-- Project Organization
+✅ **What You'll Install:**
+- Visual Studio Code (VS Code) - A powerful code editor
+- Python - A versatile programming language
+- Python extensions for VS Code
 
 ---
 
-## 🛠️ Installing and Configuring Tools
+## 🪟 Windows Installation
 
-### **1️⃣ Visual Studio Code (VS Code)**
-- **Windows**: Download from [VS Code website](https://code.visualstudio.com/) and run installer.
-- **macOS**: Download and drag VS Code to Applications folder.
-- **Linux**:
+### **1️⃣ Installing VS Code on Windows**
+- **Download VS Code**:
+  - Visit the [Visual Studio Code website](https://code.visualstudio.com/download)
+  - Click the **Windows** download button
+  - The `.exe` installer will download automatically
+
+- **Run the Installer**:
+  - Open the downloaded `.exe` file
+  - Accept the license agreement
+  - Select destination location (or keep default)
+  - Important: Check these options:
+    - ✓ Create a desktop icon
+    - ✓ Add to PATH
+    - ✓ Register Code as an editor for supported file types
+  - Click **Install** and wait for completion
+  - Launch VS Code when finished
+
+### **2️⃣ Installing Python on Windows**
+- **Download Python**:
+  - Visit the [Python downloads page](https://www.python.org/downloads/)
+  - Click **Download Python** (latest version)
+  
+- **Run the Installer**:
+  - Open the downloaded `.exe` file
+  - **IMPORTANT**: Check ✓ **Add Python to PATH**
+  - Select **Install Now** (recommended)
+  - Wait for installation to complete
+  
+- **Verify Installation**:
+  - Open Command Prompt (Win+R, type `cmd`, press Enter)
+  - Type `python --version` and press Enter
+  - You should see the Python version number
+
+### **3️⃣ Setting Up Python in VS Code (Windows)**
+- Open VS Code
+- Click on the **Extensions** icon in the sidebar (or press Ctrl+Shift+X)
+- Search for "**Python**" (by Microsoft)
+- Click **Install**
+- Create a new file with `.py` extension
+- VS Code will recommend Python interpreter - select the one you installed
+
+---
+
+## 🍎 macOS Installation
+
+### **1️⃣ Installing VS Code on macOS**
+- **Download VS Code**:
+  - Visit the [Visual Studio Code website](https://code.visualstudio.com/download)
+  - Click the **macOS** download button
+  - A `.zip` file will download
+  
+- **Install VS Code**:
+  - Open the downloaded `.zip` file
+  - Drag **Visual Studio Code.app** to your **Applications** folder
+  - Open VS Code from Applications
+  - (Optional) Add VS Code to Dock by right-clicking the icon and selecting **Options → Keep in Dock**
+
+### **2️⃣ Installing Python on macOS**
+- **Download Python**:
+  - Visit the [Python downloads page](https://www.python.org/downloads/)
+  - Click **Download Python** (latest version)
+  - A `.pkg` installer will download
+  
+- **Run the Installer**:
+  - Open the downloaded `.pkg` file
+  - Follow the installation steps
+  - The installer will place Python in `/Applications/Python`
+  
+- **Verify Installation**:
+  - Open Terminal (Applications → Utilities → Terminal)
+  - Type `python3 --version` and press Enter
+  - You should see the Python version number
+
+- **Alternative Installation via Homebrew**:
+  - If you have Homebrew installed, you can run:
   ```bash
+  brew install python
+  ```
+
+### **3️⃣ Setting Up Python in VS Code (macOS)**
+- Open VS Code
+- Click on the **Extensions** icon in the sidebar (or press Cmd+Shift+X)
+- Search for "**Python**" (by Microsoft)
+- Click **Install**
+- Create a new file with `.py` extension
+- VS Code will recommend Python interpreter - select the one you installed
+
+---
+
+## 🐧 Linux Installation
+
+### **1️⃣ Installing VS Code on Linux**
+- **Ubuntu/Debian-based Distributions**:
+  ```bash
+  # Update package information
   sudo apt update
+  # Install dependencies
   sudo apt install software-properties-common apt-transport-https wget
-  wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-  sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+  # Import Microsoft GPG key
+  wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+  sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
+  sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
+  rm -f packages.microsoft.gpg
+  # Install VS Code
   sudo apt update
   sudo apt install code
   ```
 
-### **2️⃣ VS Code Configuration**
-- Change theme: Press **Ctrl+Shift+P** (or **Cmd+Shift+P**) and search for "Color Theme"
-- Adjust font size: Open Settings (**Ctrl+,** or **Cmd+,**) and search for "Font Size"
-- Install extensions:
-  - **Python**
-  - **Prettier - Code Formatter**
-  - **GitLens**
-
-### **3️⃣ Git Installation**
-- **Windows**: Download from [Git website](https://git-scm.com/)
-- **macOS**: Use pre-installed Git or install via `brew install git`
-- **Linux**: Install with `sudo apt install git`
-- Verify with `git --version`
-
-### **4️⃣ Git Configuration**
-- Set name and email:
+- **Fedora/RHEL-based Distributions**:
   ```bash
-  git config --global user.name "Your Name"
-  git config --global user.email "you@example.com"
+  # Import Microsoft GPG key
+  sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+  # Add VS Code repository
+  sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
+  # Install VS Code
+  sudo dnf check-update
+  sudo dnf install code
   ```
+
+- **Arch Linux**:
+  ```bash
+  # Install from AUR
+  yay -S visual-studio-code-bin
+  # or
+  paru -S visual-studio-code-bin
+  ```
+
+### **2️⃣ Installing Python on Linux**
+- **Ubuntu/Debian-based Distributions**:
+  ```bash
+  # Update package information
+  sudo apt update
+  # Install Python
+  sudo apt install python3 python3-pip python3-venv
+  ```
+
+- **Fedora/RHEL-based Distributions**:
+  ```bash
+  sudo dnf install python3 python3-pip
+  ```
+
+- **Arch Linux**:
+  ```bash
+  sudo pacman -S python python-pip
+  ```
+
+- **Verify Installation**:
+  ```bash
+  python3 --version
+  pip3 --version
+  ```
+
+### **3️⃣ Setting Up Python in VS Code (Linux)**
+- Open VS Code
+- Click on the **Extensions** icon in the sidebar (or press Ctrl+Shift+X)
+- Search for "**Python**" (by Microsoft)
+- Click **Install**
+- Create a new file with `.py` extension
+- VS Code will recommend Python interpreter - select the one you installed
 
 ---
 
-## 🌐 GitHub Setup
+## 🚀 Testing Your Installation
 
-### **1️⃣ Account Creation**
-- Visit [GitHub](https://github.com) and sign up for an account.
-- Verify your email address.
-
-### **2️⃣ Repository Creation**
-- Click the "+" icon and select "New repository".
-- Name your repository (e.g., "Programming-100-Notes").
-- Click "Create repository".
-
-### **3️⃣ GitHub Authentication Methods**
-
-#### **Option A: Using GitHub CLI (gh) - Recommended for Beginners**
-GitHub CLI provides a much simpler authentication process:
-
-1. **Install GitHub CLI**:
-   - **Windows**: `winget install --id GitHub.cli`
-   - **macOS**: `brew install gh`
-   - **Linux**: 
-     ```bash
-     curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
-     echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
-     sudo apt update
-     sudo apt install gh
-     ```
-
-2. **Authenticate with GitHub**:
-   ```bash
-   gh auth login
+### **1️⃣ Create a Simple Python Project**
+1. Open VS Code
+2. Create a new file: `File → New File` (or Ctrl+N / Cmd+N)
+3. Save it as `hello.py`: `File → Save` (or Ctrl+S / Cmd+S)
+4. Write this code:
+   ```python
+   print("Hello, World!")
+   print("Python and VS Code are now installed!")
    ```
-   - Select "GitHub.com"
-   - Select "HTTPS" 
-   - Confirm to authenticate with your GitHub credentials
-   - Choose browser authentication when prompted
-   - Complete the authentication in the browser window that opens
+5. Run the code:
+   - Click the "Play" button in the top-right corner, or
+   - Right-click and select "Run Python File in Terminal", or
+   - Press F5
 
-3. **Verify authentication**:
-   ```bash
-   gh auth status
-   ```
-
-This method eliminates the need for manual SSH setup and will handle authentication for git commands automatically.
-
-#### **Option B: SSH Setup (Alternative Method)**
-- Generate SSH keys:
-  ```bash
-  ssh-keygen -t rsa -b 4096 -C "you@example.com"
-  ```
-- Copy your public key:
-  ```bash
-  cat ~/.ssh/id_rsa.pub
-  ```
-- Add to GitHub: Settings → SSH and GPG keys → New SSH key
-- Test with: `ssh -T git@github.com`
-
----
-
-## 📂 Python Project Setup
-
-### **1️⃣ Project Creation**
-- Create project folder:
-  ```bash
-  mkdir Programming-100-Notes
-  cd Programming-100-Notes
-  ```
-- Create a Python file:
-  ```bash
-  touch main.py
-  code main.py
-  ```
-- Test with: `print("Hello, World!")`
-
-### **2️⃣ Virtual Environment**
-- Create environment:
-  ```bash
-  python3 -m venv venv
-  ```
-- Activate:
-  - **Windows**: `.\venv\Scripts\activate`
-  - **macOS/Linux**: `source venv/bin/activate`
-- Install packages: `pip install flask`
-- Deactivate: `deactivate`
-
----
-
-## 🔍 GitHub Integration
-
-1️⃣ **Initialize repository**: `git init`  
-2️⃣ **Add files**: `git add .`  
-3️⃣ **Commit changes**: `git commit -m "Initial commit"`  
-4️⃣ **Push to GitHub**:
-
-**If using GitHub CLI (gh)**:
-```bash
-# Create a repository on GitHub and push your code
-gh repo create Programming-100-Notes --private --source=. --remote=origin
-git push -u origin main
-```
-
-**If using traditional method**:
-```bash
-git remote add origin git@github.com:YourUsername/Programming-100-Notes.git
-git push -u origin main
-```
+### **2️⃣ Verify Python Extensions**
+1. Your VS Code should provide:
+   - Syntax highlighting for Python
+   - Code completion suggestions
+   - Error and warning indicators
+   - Option to select Python interpreter
 
 ---
 
 ## 📚 Summary
-This guide provides a **complete development environment** for the TCM Programming 100 course. With VS Code, Git, GitHub, and Python virtual environments properly configured, you're ready to **begin coding** efficiently and effectively. Using GitHub CLI (gh) makes authentication much simpler, especially for beginners. 🚀
+Congratulations! You've successfully installed **Visual Studio Code** and **Python** on your operating system. These tools provide a powerful environment for Python development, with features like syntax highlighting, code completion, debugging, and more. 
+
+Both VS Code and Python are cross-platform, meaning the skills you learn will transfer across Windows, macOS, and Linux environments. Happy coding! 🚀
