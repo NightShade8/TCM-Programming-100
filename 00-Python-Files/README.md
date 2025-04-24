@@ -33,6 +33,7 @@ Explores boolean expressions, relational operators, and logical operators (`and`
 ### 4️⃣ **04-Conditional-Statements.py**
 **Summary**:  
 Demonstrates the use of conditional statements (`if`, `elif`, `else`) to make decisions in Python programs.
+
 📌 **Use Case**: Implement logic branching based on dynamic conditions.
 
 ---
@@ -50,6 +51,22 @@ A simple calculator script that performs basic arithmetic operations (`+`, `-`, 
 Illustrates the use of `for` and `while` loops in Python, including iterating over lists, strings, and ranges.
 
 📌 **Use Case**: Automate repetitive tasks and iterate over data structures.
+
+---
+
+### 7️⃣ **07-Lists.py**
+**Summary**:  
+Provides examples of creating, modifying, and iterating over lists in Python, including list comprehensions.
+
+📌 **Use Case**: Learn how to work with Python's versatile list data structure.
+
+---
+
+### 8️⃣ **08-Tuples.py**
+**Summary**:  
+Explains the characteristics of tuples in Python, including immutability and common operations like unpacking and indexing.
+
+📌 **Use Case**: Understand how to use tuples for fixed collections of data.
 
 ---
 
