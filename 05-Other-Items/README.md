@@ -4,14 +4,35 @@ Welcome to the **05-Other-Items** README! This document provides a quick referen
 
 ---
 
-## 1️⃣ 01-importing-modules.md
+## 1️⃣ 01-Importing-Modules.md
 **Summary**:  
-This file provides an overview of how to import modules in various programming languages. It explains the syntax and best practices for module imports, enabling modular and reusable code.
+This file provides an overview of how to import modules in Python. It explains the syntax and best practices for module imports, enabling modular and reusable code.
 
 **Key Features**:  
-- Covers module import syntax for multiple languages (e.g., Python, JavaScript).  
-- Highlights common pitfalls and how to avoid them.  
-- Includes examples for both relative and absolute imports.
+- Covers different ways to import modules (e.g., `import`, `from ... import`).  
+- Explains aliasing and wildcard imports.  
+- Includes practical examples for better understanding.
+
+---
+
+## 2️⃣ 02-Sockets.md
+**Summary**:  
+This file introduces socket programming in Python, explaining how to create and manage sockets for network communication.
+
+**Key Features**:  
+- Explains the basics of socket creation and communication.  
+- Covers TCP and UDP protocols.  
+- Includes examples of a simple TCP server and client.
+
+---
+
+## 3️⃣ README.md
+**Summary**:  
+This file serves as an overview of the `05-Other-Items` directory, summarizing the contents and purpose of each file.
+
+**Key Features**:  
+- Provides a structured reference for the directory.  
+- Helps users quickly locate specific files and topics.
 
 ---
 
