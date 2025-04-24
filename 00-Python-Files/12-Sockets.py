@@ -10,6 +10,5 @@ s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) #af_inet is ipv4, sock str
 s.connect((HOST,PORT))
 
 
-import subprocess
 
 #nc -nvlp 7777
