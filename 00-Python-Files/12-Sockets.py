@@ -1,5 +1,6 @@
 #SOCKETS - Sockets can be used to connect two nodes together.  
 # This File is inteded to be used on a kali linux machine (for ethical hacking purposed only)
+# The NC command is commented out to avoid giving errors, in order to run the code, uncomment the command and run it in a terminal
 import socket
 
 HOST = '127.0.0.1'
@@ -11,4 +12,4 @@ s.connect((HOST,PORT))
 
 import subprocess
 
-nc -nvlp 7777
+#nc -nvlp 7777
