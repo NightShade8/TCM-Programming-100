@@ -33,7 +33,6 @@ Explores boolean expressions, relational operators, and logical operators (`and`
 ### 4️⃣ **04-Conditional-Statements.py**
 **Summary**:  
 Demonstrates the use of conditional statements (`if`, `elif`, `else`) to make decisions in Python programs.
-
 📌 **Use Case**: Implement logic branching based on dynamic conditions.
 
 ---
