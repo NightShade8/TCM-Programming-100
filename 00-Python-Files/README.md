@@ -68,6 +68,12 @@ Explains the characteristics of tuples in Python, including immutability and com
 
 📌 **Use Case**: Understand how to use tuples for fixed collections of data.
 
+### 9️⃣ **09-Dictionaries.py**
+**Summary**:  
+Covers the basics of dictionaries in Python, including creating, accessing, modifying, and iterating over key-value pairs.
+
+📌 **Use Case**: Learn how to use dictionaries for efficient data storage and retrieval.
+
 ---
 
 ## 📚 Additional Notes
