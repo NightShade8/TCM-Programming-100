@@ -61,12 +61,14 @@ A simple calculator script that performs basic arithmetic operations (`+`, `-`, 
 
 ## 6️⃣ 06-Loops.py
 **Summary**:  
-Illustrates the use of `for` and `while` loops in Python, including iterating over lists, strings, and ranges.
+Illustrates the use of loops in Python, including `for` and `while` loops, to handle repetitive tasks efficiently.
 
 **Key Features**:  
 - Automate repetitive tasks with loops.  
-- Iterate over various data structures.  
-- Understand the differences between `for` and `while` loops.
+- Iterate over lists, strings, and ranges.  
+- Understand the differences between `for` and `while` loops.  
+- Explore nested loops for complex iterations.  
+- Learn how to use `break` and `continue` statements to control loop behavior.
 
 ---
 
@@ -100,6 +102,39 @@ Covers the basics of dictionaries in Python, including creating, accessing, modi
 - Learn how to create and access dictionaries.  
 - Modify and iterate over key-value pairs.  
 - Use dictionaries for efficient data storage and retrieval.
+
+---
+
+## 🔟 10-Strings-Revisited.py
+**Summary**:  
+Revisits advanced string manipulation techniques, including slicing, formatting, and common string methods.
+
+**Key Features**:  
+- Learn advanced string slicing and indexing.  
+- Explore string formatting with `format()` and f-strings.  
+- Use built-in methods for efficient string manipulation.
+
+---
+
+## 1️⃣1️⃣ 11-Importing-Modules.py
+**Summary**:  
+Demonstrates how to import and use modules in Python, including aliasing and accessing system functions.
+
+**Key Features**:  
+- Learn how to import modules using `import` and `from`.  
+- Use aliases for cleaner code.  
+- Access system functions and parameters.
+
+---
+
+## 1️⃣2️⃣ 12-Sockets.py
+**Summary**:  
+A script demonstrating how to use sockets to connect two nodes together. This file is intended for use on a Kali Linux machine for ethical hacking purposes only.
+
+**Key Features**:  
+- Learn how to create a socket using Python's `socket` module.  
+- Understand how to connect to a server using IP and port.  
+- Explore basic socket programming concepts.
 
 ---
 
