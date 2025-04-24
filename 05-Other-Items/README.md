@@ -26,14 +26,4 @@ This file introduces socket programming in Python, explaining how to create and 
 
 ---
 
-## 3️⃣ README.md
-**Summary**:  
-This file serves as an overview of the `05-Other-Items` directory, summarizing the contents and purpose of each file.
-
-**Key Features**:  
-- Provides a structured reference for the directory.  
-- Helps users quickly locate specific files and topics.
-
----
-
 Happy coding! 🚀
