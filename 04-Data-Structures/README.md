@@ -20,7 +20,9 @@ Lists are ordered, mutable collections that can store a variety of data types. T
 Tuples are immutable, ordered collections. They are useful for storing data that should not be modified after creation, such as coordinates or configuration values.
 
 **Key Features**:  
-- Ordered and indexed.
+- Immutable (cannot be changed).
+- Useful for fixed collections like coordinates or settings.
+- Supports duplicate elements.
 - Immutable (cannot be changed).
 - Supports duplicate elements.
 
